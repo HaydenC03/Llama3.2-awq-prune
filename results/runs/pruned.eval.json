@@ -1,0 +1,67 @@
+{
+  "variant": "pruned",
+  "display_name": "Pruned (structured)",
+  "path": "/app/artifacts/pruned/Llama-3.2-1B-Instruct",
+  "params": 1034487808,
+  "size_bytes": 2068992256,
+  "size_gb": 1.927,
+  "compression_ratio": 1.195,
+  "accuracy": {
+    "arc_easy": 0.49,
+    "hellaswag": 0.34,
+    "piqa": 0.685
+  },
+  "accuracy_norm": {
+    "arc_easy": 0.465,
+    "hellaswag": 0.385,
+    "piqa": 0.695
+  },
+  "accuracy_detail": {
+    "arc_easy": {
+      "n": 200,
+      "acc": 0.49,
+      "acc_norm": 0.465,
+      "nll": 24.3378
+    },
+    "hellaswag": {
+      "n": 200,
+      "acc": 0.34,
+      "acc_norm": 0.385,
+      "nll": 120.4748
+    },
+    "piqa": {
+      "n": 200,
+      "acc": 0.685,
+      "acc_norm": 0.695,
+      "nll": 97.6976
+    }
+  },
+  "accuracy_avg": 0.505,
+  "ppl_wikitext2": 152.128,
+  "peak_vram_gb": 3.476,
+  "avg_bits": 16,
+  "prune": {
+    "old_intermediate": 8192,
+    "new_intermediate": 6144,
+    "keep_ratio": 0.75,
+    "scoring": "gate_up_norm",
+    "removed_channels": 32768
+  },
+  "heal": null,
+  "complexity": {
+    "ms_per_token": 17.286,
+    "tokens_per_s": 57.8,
+    "ttft_ms": 18.0,
+    "prompt_len": 64,
+    "new_tokens": 128,
+    "peak_vram_gb": 2.434,
+    "gflops_per_token": 2.2031,
+    "params_b": 1.0344,
+    "prefill_ms": {
+      "128": 22.84,
+      "512": 86.66,
+      "1024": 155.23,
+      "2048": 299.18
+    }
+  }
+}

@@ -1,0 +1,7 @@
+# Version pins that keep the CUDA/AWQ stack internally consistent.
+# numpy is held at 1.x: awq_ext is compiled against numpy 1.x C headers.
+numpy==1.26.4
+nvidia-cublas-cu12==12.4.5.8
+nvidia-cuda-nvrtc-cu12==12.4.127
+nvidia-cuda-runtime-cu12==12.4.127
+nvidia-cudnn-cu12==9.1.0.70

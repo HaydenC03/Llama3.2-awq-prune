@@ -1,0 +1,1652 @@
+{
+  "variant": "awq",
+  "display_name": "AWQ W4A16",
+  "path": "/app/artifacts/awq/Llama-3.2-1B-Instruct",
+  "params": 262735872,
+  "size_bytes": 1031057848,
+  "size_gb": 0.96,
+  "compression_ratio": 2.397,
+  "accuracy": {
+    "arc_easy": 0.66,
+    "hellaswag": 0.42,
+    "piqa": 0.8
+  },
+  "accuracy_norm": {
+    "arc_easy": 0.605,
+    "hellaswag": 0.58,
+    "piqa": 0.76
+  },
+  "accuracy_detail": {
+    "arc_easy": {
+      "n": 200,
+      "acc": 0.66,
+      "acc_norm": 0.605,
+      "nll": 13.8035
+    },
+    "hellaswag": {
+      "n": 200,
+      "acc": 0.42,
+      "acc_norm": 0.58,
+      "nll": 81.4156
+    },
+    "piqa": {
+      "n": 200,
+      "acc": 0.8,
+      "acc_norm": 0.76,
+      "nll": 64.1925
+    }
+  },
+  "accuracy_avg": 0.6267,
+  "ppl_wikitext2": 16.241,
+  "peak_vram_gb": 2.444,
+  "avg_bits": 4.0,
+  "blocks": {
+    "block 00": {
+      "params": 60817408,
+      "weighted_bits": 243269632.0,
+      "max_bits": 4,
+      "bits": 4.0
+    },
+    "block 01": {
+      "params": 60817408,
+      "weighted_bits": 243269632.0,
+      "max_bits": 4,
+      "bits": 4.0
+    },
+    "block 02": {
+      "params": 60817408,
+      "weighted_bits": 243269632.0,
+      "max_bits": 4,
+      "bits": 4.0
+    },
+    "block 03": {
+      "params": 60817408,
+      "weighted_bits": 243269632.0,
+      "max_bits": 4,
+      "bits": 4.0
+    },
+    "block 04": {
+      "params": 60817408,
+      "weighted_bits": 243269632.0,
+      "max_bits": 4,
+      "bits": 4.0
+    },
+    "block 05": {
+      "params": 60817408,
+      "weighted_bits": 243269632.0,
+      "max_bits": 4,
+      "bits": 4.0
+    },
+    "block 06": {
+      "params": 60817408,
+      "weighted_bits": 243269632.0,
+      "max_bits": 4,
+      "bits": 4.0
+    },
+    "block 07": {
+      "params": 60817408,
+      "weighted_bits": 243269632.0,
+      "max_bits": 4,
+      "bits": 4.0
+    },
+    "block 08": {
+      "params": 60817408,
+      "weighted_bits": 243269632.0,
+      "max_bits": 4,
+      "bits": 4.0
+    },
+    "block 09": {
+      "params": 60817408,
+      "weighted_bits": 243269632.0,
+      "max_bits": 4,
+      "bits": 4.0
+    },
+    "block 10": {
+      "params": 60817408,
+      "weighted_bits": 243269632.0,
+      "max_bits": 4,
+      "bits": 4.0
+    },
+    "block 11": {
+      "params": 60817408,
+      "weighted_bits": 243269632.0,
+      "max_bits": 4,
+      "bits": 4.0
+    },
+    "block 12": {
+      "params": 60817408,
+      "weighted_bits": 243269632.0,
+      "max_bits": 4,
+      "bits": 4.0
+    },
+    "block 13": {
+      "params": 60817408,
+      "weighted_bits": 243269632.0,
+      "max_bits": 4,
+      "bits": 4.0
+    },
+    "block 14": {
+      "params": 60817408,
+      "weighted_bits": 243269632.0,
+      "max_bits": 4,
+      "bits": 4.0
+    },
+    "block 15": {
+      "params": 60817408,
+      "weighted_bits": 243269632.0,
+      "max_bits": 4,
+      "bits": 4.0
+    },
+    "embeddings/head": {
+      "params": 262668288,
+      "weighted_bits": 1050673152.0,
+      "max_bits": 4,
+      "bits": 4.0
+    }
+  },
+  "bit_plan": {
+    "modules": {
+      "model.layers.0.self_attn.q_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.0.self_attn.k_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.0.self_attn.v_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.0.self_attn.o_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.0.mlp.gate_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.0.mlp.up_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.0.mlp.down_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.1.self_attn.q_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.1.self_attn.k_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.1.self_attn.v_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.1.self_attn.o_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.1.mlp.gate_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.1.mlp.up_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.1.mlp.down_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.2.self_attn.q_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.2.self_attn.k_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.2.self_attn.v_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.2.self_attn.o_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.2.mlp.gate_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.2.mlp.up_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.2.mlp.down_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.3.self_attn.q_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.3.self_attn.k_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.3.self_attn.v_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.3.self_attn.o_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.3.mlp.gate_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.3.mlp.up_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.3.mlp.down_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.4.self_attn.q_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.4.self_attn.k_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.4.self_attn.v_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.4.self_attn.o_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.4.mlp.gate_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.4.mlp.up_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.4.mlp.down_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.5.self_attn.q_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.5.self_attn.k_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.5.self_attn.v_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.5.self_attn.o_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.5.mlp.gate_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.5.mlp.up_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.5.mlp.down_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.6.self_attn.q_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.6.self_attn.k_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.6.self_attn.v_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.6.self_attn.o_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.6.mlp.gate_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.6.mlp.up_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.6.mlp.down_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.7.self_attn.q_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.7.self_attn.k_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.7.self_attn.v_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.7.self_attn.o_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.7.mlp.gate_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.7.mlp.up_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.7.mlp.down_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.8.self_attn.q_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.8.self_attn.k_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.8.self_attn.v_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.8.self_attn.o_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.8.mlp.gate_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.8.mlp.up_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.8.mlp.down_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.9.self_attn.q_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.9.self_attn.k_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.9.self_attn.v_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.9.self_attn.o_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.9.mlp.gate_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.9.mlp.up_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.9.mlp.down_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.10.self_attn.q_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.10.self_attn.k_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.10.self_attn.v_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.10.self_attn.o_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.10.mlp.gate_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.10.mlp.up_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.10.mlp.down_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.11.self_attn.q_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.11.self_attn.k_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.11.self_attn.v_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.11.self_attn.o_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.11.mlp.gate_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.11.mlp.up_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.11.mlp.down_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.12.self_attn.q_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.12.self_attn.k_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.12.self_attn.v_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.12.self_attn.o_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.12.mlp.gate_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.12.mlp.up_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.12.mlp.down_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.13.self_attn.q_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.13.self_attn.k_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.13.self_attn.v_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.13.self_attn.o_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.13.mlp.gate_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.13.mlp.up_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.13.mlp.down_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.14.self_attn.q_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.14.self_attn.k_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.14.self_attn.v_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.14.self_attn.o_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.14.mlp.gate_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.14.mlp.up_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.14.mlp.down_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.15.self_attn.q_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.15.self_attn.k_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.15.self_attn.v_proj": {
+        "bits": 4,
+        "params": 1048576,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.15.self_attn.o_proj": {
+        "bits": 4,
+        "params": 4194304,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.15.mlp.gate_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.15.mlp.up_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "model.layers.15.mlp.down_proj": {
+        "bits": 4,
+        "params": 16777216,
+        "protected": false,
+        "in_avg": true
+      },
+      "lm_head": {
+        "bits": 4,
+        "params": 262668288,
+        "protected": false,
+        "in_avg": false
+      }
+    },
+    "avg_bits": 4.0,
+    "w_bit": 4,
+    "protect_bits": 8,
+    "protect_patterns": [],
+    "avg_bits_scope": "transformer body linears (lm_head excluded)"
+  },
+  "quant": {
+    "quant_seconds": 576.5,
+    "quant_config": {
+      "zero_point": true,
+      "q_group_size": 128,
+      "w_bit": 4,
+      "version": "GEMM"
+    },
+    "bit_plan": {
+      "modules": {
+        "model.layers.0.self_attn.q_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.0.self_attn.k_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.0.self_attn.v_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.0.self_attn.o_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.0.mlp.gate_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.0.mlp.up_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.0.mlp.down_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.1.self_attn.q_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.1.self_attn.k_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.1.self_attn.v_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.1.self_attn.o_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.1.mlp.gate_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.1.mlp.up_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.1.mlp.down_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.2.self_attn.q_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.2.self_attn.k_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.2.self_attn.v_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.2.self_attn.o_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.2.mlp.gate_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.2.mlp.up_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.2.mlp.down_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.3.self_attn.q_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.3.self_attn.k_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.3.self_attn.v_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.3.self_attn.o_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.3.mlp.gate_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.3.mlp.up_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.3.mlp.down_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.4.self_attn.q_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.4.self_attn.k_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.4.self_attn.v_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.4.self_attn.o_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.4.mlp.gate_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.4.mlp.up_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.4.mlp.down_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.5.self_attn.q_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.5.self_attn.k_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.5.self_attn.v_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.5.self_attn.o_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.5.mlp.gate_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.5.mlp.up_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.5.mlp.down_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.6.self_attn.q_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.6.self_attn.k_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.6.self_attn.v_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.6.self_attn.o_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.6.mlp.gate_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.6.mlp.up_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.6.mlp.down_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.7.self_attn.q_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.7.self_attn.k_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.7.self_attn.v_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.7.self_attn.o_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.7.mlp.gate_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.7.mlp.up_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.7.mlp.down_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.8.self_attn.q_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.8.self_attn.k_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.8.self_attn.v_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.8.self_attn.o_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.8.mlp.gate_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.8.mlp.up_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.8.mlp.down_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.9.self_attn.q_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.9.self_attn.k_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.9.self_attn.v_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.9.self_attn.o_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.9.mlp.gate_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.9.mlp.up_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.9.mlp.down_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.10.self_attn.q_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.10.self_attn.k_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.10.self_attn.v_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.10.self_attn.o_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.10.mlp.gate_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.10.mlp.up_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.10.mlp.down_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.11.self_attn.q_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.11.self_attn.k_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.11.self_attn.v_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.11.self_attn.o_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.11.mlp.gate_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.11.mlp.up_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.11.mlp.down_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.12.self_attn.q_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.12.self_attn.k_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.12.self_attn.v_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.12.self_attn.o_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.12.mlp.gate_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.12.mlp.up_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.12.mlp.down_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.13.self_attn.q_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.13.self_attn.k_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.13.self_attn.v_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.13.self_attn.o_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.13.mlp.gate_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.13.mlp.up_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.13.mlp.down_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.14.self_attn.q_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.14.self_attn.k_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.14.self_attn.v_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.14.self_attn.o_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.14.mlp.gate_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.14.mlp.up_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.14.mlp.down_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.15.self_attn.q_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.15.self_attn.k_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.15.self_attn.v_proj": {
+          "bits": 4,
+          "params": 1048576,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.15.self_attn.o_proj": {
+          "bits": 4,
+          "params": 4194304,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.15.mlp.gate_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.15.mlp.up_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "model.layers.15.mlp.down_proj": {
+          "bits": 4,
+          "params": 16777216,
+          "protected": false,
+          "in_avg": true
+        },
+        "lm_head": {
+          "bits": 4,
+          "params": 262668288,
+          "protected": false,
+          "in_avg": false
+        }
+      },
+      "avg_bits": 4.0,
+      "w_bit": 4,
+      "protect_bits": 8,
+      "protect_patterns": [],
+      "avg_bits_scope": "transformer body linears (lm_head excluded)"
+    },
+    "blocks": {
+      "block 00": {
+        "params": 60817408,
+        "weighted_bits": 243269632.0,
+        "max_bits": 4,
+        "bits": 4.0
+      },
+      "block 01": {
+        "params": 60817408,
+        "weighted_bits": 243269632.0,
+        "max_bits": 4,
+        "bits": 4.0
+      },
+      "block 02": {
+        "params": 60817408,
+        "weighted_bits": 243269632.0,
+        "max_bits": 4,
+        "bits": 4.0
+      },
+      "block 03": {
+        "params": 60817408,
+        "weighted_bits": 243269632.0,
+        "max_bits": 4,
+        "bits": 4.0
+      },
+      "block 04": {
+        "params": 60817408,
+        "weighted_bits": 243269632.0,
+        "max_bits": 4,
+        "bits": 4.0
+      },
+      "block 05": {
+        "params": 60817408,
+        "weighted_bits": 243269632.0,
+        "max_bits": 4,
+        "bits": 4.0
+      },
+      "block 06": {
+        "params": 60817408,
+        "weighted_bits": 243269632.0,
+        "max_bits": 4,
+        "bits": 4.0
+      },
+      "block 07": {
+        "params": 60817408,
+        "weighted_bits": 243269632.0,
+        "max_bits": 4,
+        "bits": 4.0
+      },
+      "block 08": {
+        "params": 60817408,
+        "weighted_bits": 243269632.0,
+        "max_bits": 4,
+        "bits": 4.0
+      },
+      "block 09": {
+        "params": 60817408,
+        "weighted_bits": 243269632.0,
+        "max_bits": 4,
+        "bits": 4.0
+      },
+      "block 10": {
+        "params": 60817408,
+        "weighted_bits": 243269632.0,
+        "max_bits": 4,
+        "bits": 4.0
+      },
+      "block 11": {
+        "params": 60817408,
+        "weighted_bits": 243269632.0,
+        "max_bits": 4,
+        "bits": 4.0
+      },
+      "block 12": {
+        "params": 60817408,
+        "weighted_bits": 243269632.0,
+        "max_bits": 4,
+        "bits": 4.0
+      },
+      "block 13": {
+        "params": 60817408,
+        "weighted_bits": 243269632.0,
+        "max_bits": 4,
+        "bits": 4.0
+      },
+      "block 14": {
+        "params": 60817408,
+        "weighted_bits": 243269632.0,
+        "max_bits": 4,
+        "bits": 4.0
+      },
+      "block 15": {
+        "params": 60817408,
+        "weighted_bits": 243269632.0,
+        "max_bits": 4,
+        "bits": 4.0
+      },
+      "embeddings/head": {
+        "params": 262668288,
+        "weighted_bits": 1050673152.0,
+        "max_bits": 4,
+        "bits": 4.0
+      }
+    },
+    "calib_samples": 128,
+    "calib_seq_len": 512
+  },
+  "complexity": {
+    "ms_per_token": 46.576,
+    "tokens_per_s": 21.5,
+    "ttft_ms": 35.33,
+    "prompt_len": 64,
+    "new_tokens": 128,
+    "peak_vram_gb": 1.467,
+    "gflops_per_token": 2.6057,
+    "params_b": 1.2357,
+    "prefill_ms": {
+      "128": 45.02,
+      "512": 168.24,
+      "1024": 193.48,
+      "2048": 356.7
+    }
+  }
+}

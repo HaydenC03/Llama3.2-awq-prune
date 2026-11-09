@@ -1,0 +1,59 @@
+{
+  "variant": "baseline",
+  "display_name": "Original (FP16)",
+  "path": "/app/artifacts/baseline/Llama-3.2-1B-Instruct",
+  "params": 1235814400,
+  "size_bytes": 2471645608,
+  "size_gb": 2.302,
+  "compression_ratio": 1.0,
+  "accuracy": {
+    "arc_easy": 0.66,
+    "hellaswag": 0.435,
+    "piqa": 0.81
+  },
+  "accuracy_norm": {
+    "arc_easy": 0.59,
+    "hellaswag": 0.56,
+    "piqa": 0.78
+  },
+  "accuracy_detail": {
+    "arc_easy": {
+      "n": 200,
+      "acc": 0.66,
+      "acc_norm": 0.59,
+      "nll": 14.1271
+    },
+    "hellaswag": {
+      "n": 200,
+      "acc": 0.435,
+      "acc_norm": 0.56,
+      "nll": 79.8825
+    },
+    "piqa": {
+      "n": 200,
+      "acc": 0.81,
+      "acc_norm": 0.78,
+      "nll": 63.3252
+    }
+  },
+  "accuracy_avg": 0.635,
+  "ppl_wikitext2": 14.912,
+  "peak_vram_gb": 3.851,
+  "complexity": {
+    "ms_per_token": 19.348,
+    "tokens_per_s": 51.7,
+    "ttft_ms": 20.38,
+    "prompt_len": 64,
+    "new_tokens": 128,
+    "peak_vram_gb": 2.809,
+    "gflops_per_token": 2.6057,
+    "params_b": 1.2357,
+    "prefill_ms": {
+      "128": 28.27,
+      "512": 95.67,
+      "1024": 188.15,
+      "2048": 343.2
+    }
+  },
+  "avg_bits": null
+}

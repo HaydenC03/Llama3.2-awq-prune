@@ -1,0 +1,16 @@
+{
+  "ms_per_token": 19.348,
+  "tokens_per_s": 51.7,
+  "ttft_ms": 20.38,
+  "prompt_len": 64,
+  "new_tokens": 128,
+  "peak_vram_gb": 2.809,
+  "gflops_per_token": 2.6057,
+  "params_b": 1.2357,
+  "prefill_ms": {
+    "128": 28.27,
+    "512": 95.67,
+    "1024": 188.15,
+    "2048": 343.2
+  }
+}

@@ -1,0 +1,47 @@
+# docker compose for the AWQ + pruning pipeline.
+#
+#   docker compose build
+#   docker compose run --rm pipeline --stage all
+#
+# GPU access needs Docker Desktop 4.30+ with WSL2 backend and the
+# NVIDIA driver on the host (no CUDA toolkit needed on Windows itself).
+
+services:
+  pipeline:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: llama32-awq-prune:latest
+    # modern compose syntax for GPU passthrough
+    gpus: all
+    shm_size: 8gb
+    ipc: host
+    stdin_open: true
+    tty: true
+    environment:
+      - HF_HOME=/root/.cache/huggingface
+      - PYTHONPATH=/app
+      - TORCH_CUDA_ARCH_LIST=8.6
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      # live code (so you can edit .py without rebuilding)
+      - ./src:/app/src
+      - ./scripts:/app/scripts
+      - ./configs:/app/configs
+      # results land on the Windows side
+      - ./results:/app/results
+      - ./artifacts:/app/artifacts
+      # model weights cache: keeps ~10 GB of downloads between runs
+      - hf-cache:/root/.cache/huggingface
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+volumes:
+  hf-cache:

@@ -1,0 +1,11 @@
+.env
+models/
+artifacts/
+results/*.json
+results/*.csv
+results/extended/
+results/plots/*.png
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/

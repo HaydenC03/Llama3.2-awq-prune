@@ -1,0 +1,50 @@
+# End-to-end compression study on Llama-3.2-1B
+# Every value can be overridden with a CLI flag (see `python -m src.pipeline --help`).
+
+model:
+  # id: meta-llama/Llama-3.2-1B-Instruct   # gated, needs HF_TOKEN
+  id: unsloth/Llama-3.2-1B-Instruct        # ungated mirror, same weights
+  dtype: float16
+
+awq:
+  backend: autoawq
+  w_bit: 4
+  q_group_size: 128
+  zero_point: true
+  version: GEMM
+  calib_samples: 128
+  calib_seq_len: 512
+  # NOTE: real per-layer mixed precision is NOT achievable with AutoAWQ 0.2.7.
+  # `modules_to_not_convert` is matched against module-relative names and
+  # `down_proj` is the scaling anchor for gate/up, so per-block rules are
+  # silently ignored (the list is still written to config.json) and excluding
+  # `down_proj` raises KeyError. W8 also raises NotImplementedError.
+  # The precision ladder is therefore W4 (awq) vs FP16 (baseline).
+
+prune:
+  # fraction of the MLP intermediate width to KEEP (1.0 = no pruning)
+  keep_ratio: 0.75
+  # weight | norm of gate/up rows is the importance score
+  scoring: gate_up_norm
+  # LoRA healing steps after pruning (0 = off)
+  heal_steps: 0
+  heal_lr: 0.0002
+
+eval:
+  limit: 200
+  max_len: 1024
+  tasks: [arc_easy, hellaswag, piqa]
+  ppl_dataset: wikitext2
+
+bench:
+  prompt_lengths: [128, 512, 1024, 2048]
+  new_tokens: 128
+  repeats: 3
+
+# Extra benchmarks (CSV comparison). Generation tasks are slower than the
+# multiple-choice suite, so the default sample count is lower.
+extended:
+  tasks: [gsm8k, ms_marco, boolq]
+  limit: 100
+  max_len: 1024
+  max_new_tokens: 256

@@ -1,0 +1,11 @@
+.git
+.gitignore
+.env
+results
+models
+artifacts
+**/__pycache__
+**/*.pyc
+.pytest_cache
+*.md
+!README.md

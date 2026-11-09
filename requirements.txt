@@ -1,0 +1,41 @@
+# ---------------------------------------------------------------------------
+# llama32-awq-prune runtime dependencies
+# Target: CUDA 12.4 + RTX 3050 (8 GB, sm_86) + Llama-3.2-1B
+# ---------------------------------------------------------------------------
+
+# torch first: use the cu124 wheel index (see constraints.txt / Dockerfile)
+torch==2.5.1
+torchvision==0.20.1
+
+# Hugging Face stack. Llama-3.2 needs >= 4.45
+transformers==4.46.3
+accelerate==1.0.1
+tokenizers==0.20.3
+safetensors==0.4.5
+# autoawq 0.2.7.post3 requires >=0.26.5 (it is pulled in by that package too)
+huggingface-hub==0.26.5
+
+# datasets / eval data
+datasets==3.1.0
+pyarrow==18.1.0
+
+# AWQ weight-only quantisation. 0.2.7 no longer bundles CUDA kernels: the
+# default install uses the Triton backend, which is the path we rely on here
+# (awq_ext would need a per-torch compile; `autoawq[kernels]` is optional).
+autoawq==0.2.7.post3
+# keep the Triton major version aligned with torch 2.5.1
+triton==3.1.0
+
+# optional accuracy recovery after structured pruning
+peft==0.13.2
+
+# reporting
+matplotlib==3.9.2
+pandas==2.2.3
+numpy==1.26.4
+pyyaml==6.0.2
+tqdm==4.66.6
+tabulate==0.9.0
+
+# tests
+pytest==8.3.3
